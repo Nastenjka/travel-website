@@ -1,0 +1,392 @@
+/*FONTS IMPORTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+/*FOR ALL PAGE ELEMENTS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #850000;
+    color: white;
+}
+
+
+/*HEADER*/
+
+header {
+    font-family: "Courier Prime", sans-serif;
+    background-image: url("images/jahan-background-picture.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/*NAVIGATION*/
+
+.navigation {
+    display: flex;
+    width: 100%;
+    max-width: 1980px;
+    background-color: rgba(133, 0, 0, 0.747);
+    padding-top: 12px;
+    height: 5vh;
+    font-size: 20px;
+}
+
+.navigation-list {
+    gap: 2.5rem;
+    display: flex;
+    margin-left: auto;
+}
+
+.navigation-items {
+    color: rgb(255, 243, 228);
+    list-style: none;
+}
+
+.navigation-links {
+    color: rgb(255, 243, 228);
+    text-decoration: none;
+}
+
+.navigation-items:last-child .navigation-links {
+    margin-right: 4rem;
+}
+
+
+/*MAIN UPPER CONTENT*/
+
+.header-arrows {
+    display: flex;
+    justify-content: space-between;
+    padding: 48.75vh 5.5vh 10vh 5.5vh;
+}
+
+.header-arrow-right,
+.header-arrow-left {
+    width: 7.5vh;
+}
+
+.header-arrow-left {
+    transform: rotate(180deg);
+}
+
+.header-country-heading {
+    font-size: 100px;
+    color: white;
+    position: relative;
+    top: -80px;
+    left: 200px;
+}
+
+.running-text-red {
+    color: white;
+    background-color: #850000;
+    font-weight: 400;
+    font-size: 20px;
+    position: relative;
+    top: 50px;
+}
+
+.header-animated-text {
+    color: white;
+    display: flex;
+    width: 46vh;
+    position: relative;
+    left: 20vh;
+    top: -10vh;
+    height: 5vh;
+}
+
+.animated-text:last-of-type {
+    animation: type 0.1s infinite;
+}
+
+@keyframes type {
+    to {
+        opacity: .0;
+    }
+}
+
+.animated-text-cursor {
+    font-weight: 100;
+}
+
+
+/*MAIN SECTION*/
+
+main {
+    font-family: "Playfair Display", sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+
+.center-heading {
+    width: 100%;
+    text-align: center;
+}
+
+.main-welcome {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.yellow-span {
+    color: yellow;
+    font-weight: bold;
+}
+
+.main-text-welcome {
+    margin-top: 20px;
+}
+
+.cards-section {
+    display: flex;
+    width: 100%;
+    margin-top: 3vh;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.card {
+    height: 45vh;
+    width: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    margin-left: 10vh;
+    transition: background 0.5s ease-in-out;
+    margin-top: 5vh;
+}
+
+.card:first-child {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Asia/asia_culture.jpg);
+}
+
+.card:first-child:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Asia/asia_culture.jpg);
+}
+
+.card:first-child {
+    margin-left: 0;
+}
+
+.card:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Asia/asia_sakura.jpg);
+}
+
+.card:nth-child(2):hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Asia/asia_sakura.jpg);
+}
+
+.card:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Asia/asia_food.jpg);
+}
+
+.card:nth-child(3):hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Asia/asia_food.jpg);
+}
+
+.card:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Asia/asia_history.jpg);
+}
+
+.card:nth-child(4):hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Asia/asia_history.jpg);
+}
+
+.card:nth-child(5) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Asia/asia_art.jpg);
+}
+
+.card:nth-child(5):hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Asia/asia_art.jpg);
+}
+
+.card:nth-child(6) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Asia/asia_warning.avif);
+}
+
+.card:nth-child(6):hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Asia/asia_warning.avif);
+}
+
+.card:nth-child(7) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Asia/asia_tourist.jpg);
+}
+
+.card:nth-child(7):hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Asia/asia_tourist.jpg);
+}
+
+.card:nth-child(8) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Asia/asia_language.jpg);
+}
+
+.card:nth-child(8):hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Asia/asia_language.jpg);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    padding-left: 10px;
+    height: 23vh;
+}
+
+.card-content>h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    transition-duration: 0.7s;
+    margin-top: 17vh;
+}
+
+.card:hover h3 {
+    text-decoration: underline #850000;
+    margin-top: 6vh;
+}
+
+@keyframes text-show {
+    from {
+        filter: blur(1.5rem);
+    }
+    to {
+        filter: blur(0rem);
+    }
+}
+
+@keyframes text-hide {
+    from {
+        filter: blur(0rem);
+    }
+    to {
+        filter: blur(1.5rem);
+    }
+}
+
+.card-content>p {
+    font-size: 15px;
+    visibility: hidden;
+    transition-duration: 0.8s;
+    animation-name: text-hide;
+    animation-duration: 800ms;
+}
+
+.card:hover p {
+    visibility: visible;
+    margin-bottom: 20px;
+    animation-name: text-show;
+    animation-duration: 1000ms;
+}
+
+.card-content>a {
+    text-decoration: none;
+    background-color: #850000;
+    color: white;
+    width: 40px;
+    height: 20px;
+    padding: 5px;
+    visibility: hidden;
+    border-radius: 3px;
+    font-weight: bold;
+    transition-duration: 0.8s;
+    animation-name: text-hide;
+    animation-duration: 800ms;
+}
+
+.card:hover a {
+    visibility: visible;
+    margin-bottom: 20px;
+    animation-name: text-show;
+    animation-duration: 1000ms;
+}
+
+.reasons {
+    text-align: center;
+    font-weight: 600;
+    font-size: 45px;
+    margin-top: 10vh;
+}
+
+.reasons>span {
+    color: yellow;
+}
+
+.benefits-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits {
+    margin: 0 auto;
+    padding: 2em;
+    width: 47vh;
+    background: #1c1f2b;
+    border-radius: 10px;
+    margin-top: 20vh;
+    font-size: 20px;
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.benefits::after,
+.benefits::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.benefits::after,
+.benefits::before {
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+}
+
+.benefits::before {
+    filter: blur(1.5rem);
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.benefits>h3 {
+    margin-bottom: 10px;
+}
+
+.thank {
+    margin-top: 200px;
+    text-align: center;
+    font-size: 40px;
+}

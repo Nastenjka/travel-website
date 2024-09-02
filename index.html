@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/planet-earth-svgrepo-com.svg">
+    <link rel="" href="script.js">
+    <title>Traveller</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <ul class="navigation-list">
+                <li class="navigation-items">
+                    <a class="navigation-links" href="index.html">Home</a>
+                </li>
+                <li class="navigation-items">
+                    <a class="navigation-links" href="#">Help</a>
+                </li>
+                <li class="navigation-items">
+                    <a class="navigation-links" href="#">Regions</a>
+                </li>
+                <li class="navigation-items">
+                    <a class="navigation-links" href="#">Contact</a>
+                </li>
+                <li class="navigation-items">
+                    <a class="navigation-links" href="#">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-arrows">
+            <div class="header-arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#850000" d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM297 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L120 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l214.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L409 239c9.4 9.4 9.4 24.6 0 33.9L297 385z"/>
+                    <a class="selector-websites" href=""></a>
+                </svg>
+            </div>
+            <div class="header-arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#850000" d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM297 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L120 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l214.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L409 239c9.4 9.4 9.4 24.6 0 33.9L297 385z"/>
+                    <a class="selector-websites" href=""></a>
+                </svg>
+            </div>
+        </div>
+
+        <div class="header-country-text">
+            <h1 class="header-country-heading">ASIA</h1>
+
+            <div class="header-animated-text">
+                <p class="animated-text" id="text-write-delete"></p>
+                <p class="animated-text-cursor">|</p>
+            </div>
+        </div>
+        <script>
+            const phrases = ["路遥知马力，日久见人心,  有理走遍天下，无理寸步难行。, 几家欢喜几家愁, 哑巴吃饺子，心里有数。", "今日の敵は、明日の友, 花より団子, 未来を変えるのは、いつだって自分だ。", "꿈이 있다면 절대 포기하지 마라, 실패는 성공의 어머니이다, 너는 무엇이든 할 수 있어"];
+            let i = 0;
+            let counter;
+
+            function typingPhrases() {
+                let phrase = phrases[i].split("");
+                let loopTyping = function() {
+                    if (phrase.length > 0) {
+                        document.getElementById('text-write-delete').innerHTML += phrase.shift();
+                    } else {
+                        deletePrases();
+                        return false;
+                    };
+                    counter = setTimeout(loopTyping, 100);
+                };
+                loopTyping();
+            };
+
+            function deletePrases() {
+                let phrase = phrases[i].split("");
+                var loopDeleting = function() {
+                    if (phrase.length > 0) {
+                        phrase.pop();
+                        document.getElementById('text-write-delete').innerHTML = phrase.join("");
+                    } else {
+                        if (phrases.length > (i + 1)) {
+                            i++;
+                        } else {
+                            i = 0;
+                        };
+                        typingPhrases();
+                        return false;
+                    };
+                    counter = setTimeout(loopDeleting, 100);
+                };
+                loopDeleting();
+            };
+            typingPhrases();
+        </script>
+
+        <marquee class="running-text-red">WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME
+            TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | WELCOME TO THE ASIA | </marquee>
+    </header>
+    <main>
+        <div class="center-heading">
+            <h2 class="main-welcome">WELCOME!</h2>
+            <p class="main-text-welcome">Let's discover one of the world's regions: <span class="yellow-span"> Asia </span>. There is some information for you down below.</p>
+        </div>
+        <div class="cards-section">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Culture</h3>
+                    <p>Asian culture is unique and glorious. Discovering it is awesome...</p>
+                    <a href="https://www.asiatours.com/blog/history-culture-places-to-visit-in-asia.html" target="_blank">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Nature</h3>
+                    <p>Nature is important part of the every country. The best places to visit...</p>
+                    <a href="https://www.eternityflower.com/blogs/news/asian-flowers-and-their-meanings?srsltid=AfmBOopEIIaa94Gj_wEuopVImoJhXzL2q1jk2qZBmY09rvrDL8VL5hDo" target="_blank">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Food</h3>
+                    <p>Eating in Asian countries is very enjoyable. Here is what to try...</p>
+                    <a href="https://fhafnb.com/blog/most-popular-foods-in-asia/" target="_blank">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>History</h3>
+                    <p>As this regoin is ancient it has it's own historical formation...</p>
+                    <a href="https://www.history.com/topics/asian-history" target="_blank">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Art</h3>
+                    <p>If you want to discover this region deeply, look at it's art...</p>
+                    <a href="https://www.widewalls.ch/magazine/japanese-painting/the-great-wave-off-kanagawa" target="_blank">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Warnings</h3>
+                    <p>Being safe is important part of travelling, to make you protect...</p>
+                    <a href="https://www.ifaw.org/international/journal/18-of-the-most-endangered-animals-in-asia" target="_blank">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Tourism</h3>
+                    <p>There you can find useful tips for your trips and journeys...</p>
+                    <a href="https://www.trafalgar.com/real-word/asian-traditions-cultural-customs/" target="_blank">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Language</h3>
+                    <p>Find out something intresting for asian pronunciation...</p>
+                    <a href="https://www.berlitz.com/blog/chinese-alphabet#:~:text=Unlike%20languages%20like%20English%2C%20Spanish,represent%20meanings%20rather%20than%20sounds." target="_blank">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+        <h3 class="reasons">Reasons <span>to visit</span> Asian contries</h3>
+        <div class="benefits-section">
+            <div class="benefits">
+                <h3>Why should you visit Asia?</h3>
+                <p> 'Asia is a treasure trove of historical wonders, both ancient and modern, just waiting to be unearthed. From the awe-inspiring Angkor Wat temple in Cambodia or China's myriad ancient treasures, all the way to the eye-opening War Remnants
+                    Museum in Vietnam, you're never far from a fascinating site'
+                    <br>@Trailfinders</p>
+            </div>
+            <div class="benefits">
+                <h3>Why should you visit Asia?</h3>
+                <p> 'It is hard not to have an adventure when going to Asia. It's really an adventure in itself. And Asia is massive in size and variety. Whether far to the north or deep South Asia and everywhere in the middle, you are bound to see something
+                    that excites or surprises you.'
+                    <br>@Mondo Aj</p>
+            </div>
+            <div class="benefits">
+                <h3>Why should you visit Asia?</h3>
+                <p> 'Should you travel to Asia? In short, yes! Asia is a beautiful content filled with hundreds of diverse cultures and traditions, some of which have survived thousands of years! There are so many things that you can experience throughout
+                    Asia...'
+                    <br> @The Vojaging Teacher</p>
+            </div>
+        </div>
+        <div class="thank">
+            <h2>THANKS FOR EXPIERENCING THIS WEBSITE</h2>
+        </div>
+    </main>
+
+</body>
+
+</html>
